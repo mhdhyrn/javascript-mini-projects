@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>key code</title>
+</head>
+<body>
+    <main>
+        <div id="initial-display">
+            <h1>Please press some key to get information about it</h1>
+        </div>
+        <div id="main-display">
+            <div class="main-keyCode">
+                <h1 class="main-keyCode-value" id="keyCode"></h1>
+            </div>
+            <div class="main-boxes">
+                <div class="boxes">
+                    <div class="box-header">
+                        <span class="box-title">event.key</span>
+                    </div>
+                    <div class="box-content">
+                        <span class="box-content-value" id="eventKey"></span>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="box-header">
+                        <span class="box-title">event.location</span>
+                    </div>
+                    <div class="box-content">
+                        <span class="box-content-value" id="eventLocation"></span>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="box-header">
+                        <span class="box-title">event.which</span>
+                    </div>
+                    <div class="box-content">
+                        <span class="box-content-value" id="eventWhich"></span>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="box-header">
+                        <span class="box-title">event.code</span>
+                    </div>
+                    <div class="box-content">
+                        <span class="box-content-value" id="eventCode"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+<script src="./script.js"></script>
+</html>

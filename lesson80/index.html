@@ -1,0 +1,57 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <h1>This is a test for Java Script</h1>
+
+    <script>
+        var todos = [
+            {id: 1, name: "Js", check: false, descrip : "watch Js course"},
+            {id: 2, name: "React", check: false, descrip : "watch React course"},
+            {id: 3, name: "HTML", check: false, descrip : "watch HTML course"}
+        ]
+        var userInput = Number(prompt("Welcome to Todo List: \n 1. add a todo \n 2. delete a todo \n 3. do a todo", "1"))
+
+        switch (userInput) {
+            case 1:
+                var userAddTodoName = prompt("Inter your todo name :" , "todo")
+                var userAddTodoDescrip = prompt("Inter your todo description")
+                todos.push({id: todos.length +1, name: userAddTodoName, check: false, descrip: userAddTodoDescrip})
+                console.log(todos)
+                alert("your request done")
+                break;
+        
+            case 2:
+                var userDelTodoName = prompt("Inter your todo name :" , "Js")
+                var userDelTodoIndex = todos.findIndex(function(todo){
+                    return todo.name === userDelTodoName
+                })
+                todos.splice(userDelTodoIndex,1)
+                console.log(todos)
+                alert("your request done")
+                break;
+
+            case 3:
+                var userEditTodoName = prompt("Inter your todo name :" , "Js")
+                var userEditTodoIndex = todos.findIndex(function(todo){
+                    return todo.name = userEditTodoName
+                })
+                todos[userEditTodoIndex].check = true
+                console.log(todos)
+                alert("your request done")
+                break;
+                
+            default:
+            alert("Your request not found")
+                break;
+        }
+
+
+
+
+    </script>
+</body>
+</html>

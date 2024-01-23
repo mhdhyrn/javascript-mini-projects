@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Vazir';
+    src: local('Vazir') format('ttf');
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('./font/Vazir.ttf') format('ttf');
+}
+
+*{
+    font-family: 'Vazir';
+}
+
+body {
+    background-image: url('./img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0 0;
+}
+
+h1{
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+.countainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.title {
+    color: #FF9800;
+}
+
+.input input{
+    width: 20rem;
+    height: 3rem;
+    border: 2px solid #2196F3;
+    font-size: 15px;
+    outline: none;
+    padding: 0 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.input input:focus {
+    width: 25rem;
+    height: 3rem;
+    margin: -1rem 0;
+    border: 2px solid #FF9800;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.notif h2{
+    color: #ffffff;
+    border-bottom: #FF9800 2px solid;
+    border-top: #FF9800 2px solid;
+    padding: 5px;
+    display: none;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.btns {
+    display: flex;
+    gap: 4rem;
+}
+
+.btn {
+    width: 7rem;
+    height: 2.5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #2196F3;
+    border-left: #fff 2px solid;
+    border-right: #fff 2px solid;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #1976D2;
+    border-left: #FF9800 2px solid;
+    border-right: #FF9800 2px solid;
+}
+
+.btn:disabled{
+    background-color: #757575;
+    cursor: default;
+    border-left: #757575 2px solid;
+    border-right: #757575 2px solid;
+}
