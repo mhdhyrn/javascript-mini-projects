@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Vazir";
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-track {
+  background: #44475A;
+  border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #282A36;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0 0 0;
+  gap: 10px;
+}
+main .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+main .container #inputs {
+  width: 485px;
+  height: 300px;
+  background-color: #44475A;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  align-items: start;
+  align-content: flex-start;
+  padding: 5px;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+main .container #inputs::-webkit-scrollbar {
+  width: 2px;
+}
+main .container #inputs::-webkit-scrollbar-track {
+  background: #44475A;
+  border-radius: 5px;
+}
+main .container #inputs::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+main .container #inputs::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+main .container #inputs .twinInputs {
+  display: flex;
+  width: 150px;
+  align-items: center;
+  padding: 5px 0;
+  gap: 5px;
+}
+main .container #inputs .twinInputs span {
+  color: #F8F8F2;
+  font-size: 20px;
+}
+main .container #inputs .twinInputs .input {
+  background-color: #6272A4;
+  width: 40px;
+  height: 40px;
+  border: #F8F8F2 1px solid;
+  outline: none;
+  font-size: 17px;
+  text-align: center;
+  border-radius: 5px;
+  color: #F8F8F2;
+}
+#numberOfNodes::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#numberOfNodes {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: 3px solid #FF79C6;
+  background-color: #6272A4;
+  color: #F8F8F2;
+  font-size: 17px;
+  text-align: center;
+}
+#numberOfNodes::placeholder {
+  color: #ffffff57;
+  font-size: 15px;
+}
+#numberOfNodes:focus {
+  border: #FFB86C 3px solid;
+}
+main .container #inputs .twinInputs .input::-webkit-outer-spin-button, main .container #inputs .twinInputs .input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main .container #inputs .twinInputs .input[type=number] {
+  -moz-appearance: textfield;
+}
+main .container #inputs .twinInputs .input:focus {
+  border: #FFB86C 2px solid;
+}
+main .container .error {
+  height: 5px;
+}
+main .container #error {
+  color: #FF5555;
+  font-size: 14px;
+}
+@keyframes vibrateAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+main .container .vibration {
+  animation: vibrateAnimation 0.5s infinite;
+}
+main .container .btnContainer {
+  display: flex;
+  gap: 15px;
+  padding: 0 0 20px 0;
+}
+main .container .btnContainer button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  fill: #282A36;
+  border: 1px solid #282A36;
+  outline: none;
+  cursor: pointer;
+}
+main .container .btnContainer #delBtn {
+  background-color: #FF5555;
+}
+main .container .btnContainer #addBtn {
+  background-color: #8BE9FD;
+}
+main .radioContainer {
+  display: flex;
+  gap: 50px;
+}
+main .radioContainer .container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  color: #F8F8F2;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+main .radioContainer .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+main .radioContainer .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #c9c9c2;
+  border-radius: 50%;
+}
+main .radioContainer .container input:checked ~ .checkmark {
+  background-color: #BD93F9;
+}
+main .radioContainer .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+main .radioContainer .container input:checked ~ .checkmark:after {
+  display: block;
+}
+main .radioContainer .container .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+main .submitBtn {
+  padding-top: 20px;
+}
+main .submitBtn button {
+  width: 150px;
+  height: 50px;
+  background-color: #50FA7B;
+  color: #282A36;
+  border: #282A36 1px solid;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main .showResult {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #FF79C6;
+  font-size: 20px;
+  transition: width 0.5s ease, height 10s ease;
+}
+main .showResult table {
+  background-color: unset;
+  border: none;
+  outline: none;
+}
+main .showResult table td {
+  background-color: unset;
+  padding: 5px 10px;
+  border: #8BE9FD 1px solid;
+}/*# sourceMappingURL=index.css.map */

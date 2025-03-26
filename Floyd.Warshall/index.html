@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Floyd Warshall</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+          <input type="number" maxlength="1" id="numberOfNodes" placeholder="Number Of Nodes..."/>
+            <div id="inputs">
+                <div class="twinInputs"  data-divIndex="0">
+                    <span>(</span>
+                    <input  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" 
+                    type = "number" class="input" onchange="changeInputHandler(event)" maxlength="1" data-inputIndex="0"/>
+                    <span>,</span>
+                    <input  
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    type = "number" class="input" onchange="changeInputHandler(event)" maxlength="1" data-inputIndex="1"/>
+                    <span>)</span>
+                </div>
+            </div>
+            <div class="error">
+                <p id="error"></p>
+            </div>
+            <div class="btnContainer">
+                <button id="delBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="27" height="27"><path d="M21,4H17.9A5.009,5.009,0,0,0,13,0H11A5.009,5.009,0,0,0,6.1,4H3A1,1,0,0,0,3,6H4V19a5.006,5.006,0,0,0,5,5h6a5.006,5.006,0,0,0,5-5V6h1a1,1,0,0,0,0-2ZM11,2h2a3.006,3.006,0,0,1,2.829,2H8.171A3.006,3.006,0,0,1,11,2Zm7,17a3,3,0,0,1-3,3H9a3,3,0,0,1-3-3V6H18Z"/><path d="M10,18a1,1,0,0,0,1-1V11a1,1,0,0,0-2,0v6A1,1,0,0,0,10,18Z"/><path d="M14,18a1,1,0,0,0,1-1V11a1,1,0,0,0-2,0v6A1,1,0,0,0,14,18Z"/></svg>
+                </button>
+                <button id="addBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="35" height="35"><path d="M17,11H13V7a1,1,0,0,0-1-1h0a1,1,0,0,0-1,1v4H7a1,1,0,0,0-1,1H6a1,1,0,0,0,1,1h4v4a1,1,0,0,0,1,1h0a1,1,0,0,0,1-1V13h4a1,1,0,0,0,1-1h0A1,1,0,0,0,17,11Z"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="radioContainer">
+            <div>
+                <label class="container">Trespass
+                    <input type="radio" name="algorithm" value="trespass" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+              <div>
+                  <label class="container">Reflexive
+                      <input type="radio" name="algorithm" value="reflexive">
+                      <span class="checkmark"></span>
+                  </label>
+              </div>
+              <div>
+                  <label class="container">Symmetrical
+                      <input type="radio" name="algorithm" value="symmetrical">
+                      <span class="checkmark"></span>
+                  </label>
+              </div>
+        </div>
+        <div class="submitBtn">
+            <button onclick="submitHandler()">GO!</button>
+        </div>
+        <div class="showResult">
+        </div>
+    </main>
+</body>
+
+<script src="./script.js"></script>
+
+</html>
